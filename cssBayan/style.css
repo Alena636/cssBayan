@@ -21,38 +21,49 @@ img {
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 32px;
+    font-size: 18px;
+    background-color: azure;
+}
+
+h1 {
+   margin-left: 20px;
+   color: black;
+   font-weight: 700;
 }
 
 .accordeon {
-    max-width: 500px;
-    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    box-sizing: border-box;
 }
 
 .accordeon-item {
+    display: block;
     box-sizing: border-box;
-    width: 425px;
-    height: 69px;
-    position: static;
 }
 
 .item-input {
     width: 0;
     height: 0;
     appearance: none;
-    position: static;
+    position: absolute;
 }
 
-.item-input:checked ~ .item-img {
-    display: block;
+.item-input:checked ~ .mem {
+    height: 200px;
+    width: 180px;
     opacity: 1;
-    margin-top: 12px;
-    transition: .3s;
-    transform: scale(1.2);
+    display: block;
+    visibility: visible;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .item-input:checked ~ .title {
     color: black;
+    font-weight: bold;
 }
 
 .item-input:checked ~ .title > .item-title > .plus-icon {
@@ -64,26 +75,23 @@ body {
     justify-content: space-between;
     padding: 10px 20px 18px 20px;
     position: static;
-
+    font-weight: bold;
 }
 
 .plus-icon {
     margin: 0px;
-   width: 24px; 
+   width: 18px; 
 }
 
-img {
-    display: block;
+.mem {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
     margin: 0 auto;
     max-width: 180px;
+    transition: height .5s;
 }
 
-.item-img {
-    opacity: 0;
-    margin: 0 auto;
-    width: 352px;
-    
-    
-}
+
 
 
