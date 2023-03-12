@@ -37,11 +37,9 @@ h1 {
     flex-direction: column;
     gap: 20px;
     margin: 0px auto;
-    box-sizing: border-box;
 }
 
 .accordeon-item {
-    display: block;
     box-sizing: border-box
 }
 
@@ -146,9 +144,133 @@ h1 {
         max-width: 280px;
         transition: height .6s;
     }
+}
+
+@media (min-width: 1024px) and (max-width: 2000px) {
+    body {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 32px;
+        background-color: #d8dbe2;
+    }
+
+    .accordeon {
+        margin: 0 auto;
+        width: 50%;
+        height: fit-content;
+    }
+
+    h1 {
+        width: 50%;
+        margin: 0 auto;
+        padding-left: 20px;
+        color: black;
+        font-weight: 700;
+        margin-bottom: 30px;
+     }
+
+     .title:hover ~ .mem {
+        height: 300px;
+        width: 280px;
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 40px;
+     }
+
+     .item-title:hover ~ .mem {
+        height: 300px;
+        width: 280px;
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 40px
+     }
+
+     .mem {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        margin: 0 auto;
+        max-width: 300px;
+        transition: height .6s;
+    }
+
+    .item-input:hover {
+        cursor: pointer;
+    }
+
+    .item-input:checked ~ .title > .item-title > .plus-icon {
+        transition: .3s;
+        transform: rotate(45deg);
+        padding-left: 10px;
+        padding-bottom: 0;
+        padding-top: 5px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .item-input:checked ~ .mem {
+        height: 300px;
+        width: 280px;
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    .mem:hover {
+        height: calc(300px + 30px);
+        width: 280px;
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 40px; 
+        cursor: pointer;
+    }
+
+    .item-title:hover{
+        cursor: pointer;
+    }
+
+    .item-input:hover ~ .mem {
+        height: 300px;
+        width: 280px;
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    .plus-icon {
+        opacity: 0;
+        width: 30px;
+    }
+
+    .accordeon:hover  {
+        cursor: pointer;
+        color: black;
+    }
+
+
+    
+    
 
 
 
+
+    
+
+    
 }
 
 
